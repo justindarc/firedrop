@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "name": "Firedrop",
+  "description": "A P2P file sharing app for Firefox OS",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icons/icon_128.png"
+  },
+  "developer": {
+    "name": "Justin D'Arcangelo",
+    "url": "https://github.com/justindarc"
+  },
+  "type": "certified",
+  "permissions": {
+    "browser": {},
+    "device-storage:sdcard":   { "access": "readwrite" },
+    "device-storage:apps":     { "access": "readwrite" },
+    "device-storage:music":    { "access": "readwrite" },
+    "device-storage:pictures": { "access": "readwrite" },
+    "device-storage:videos":   { "access": "readwrite" },
+    "tcp-socket": {},
+    "webapps-manage": {},
+    "wifi-manage": {}
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "locales": {},
+  "default_locale": "en",
+  "messages": [
+    "wifip2p-pairing-request"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "firedrop",
+  "version": "0.0.1",
+  "description": "A P2P file sharing app for Firefox OS",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justindarc/firedrop.git"
+  },
+  "author": "Justin D'Arcangelo <jdarcangelo@mozilla.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justindarc/firedrop/issues"
+  },
+  "engines" : {
+    "node" : "0.11.14"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "fxos-build": "git://github.com/fxos/build#master",
+    "gulp": "3.8.x"
+  }
+}

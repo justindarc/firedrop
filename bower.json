@@ -1,0 +1,22 @@
+{
+  "name": "firedrop",
+  "version": "0.0.1",
+  "homepage": "https://github.com/justindarc/firedrop",
+  "authors": [
+    "Justin D'Arcangelo <jdarcangelo@mozilla.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "!.jshintrc",
+    "node_modules",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "mvc": "fxos/mvc#v0.0.3",
+    "fxos-web-server": "justindarc/fxos-web-server#v0.0.6",
+    "p2p-helper": "justindarc/p2p-helper.js#v0.0.1"
+  },
+  "devDependencies": {}
+}

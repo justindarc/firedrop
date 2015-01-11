@@ -1,0 +1,148 @@
+html {
+  background-color: #f0f0f0;
+  color: #505050;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body > section {
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+body > section.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+form {
+  padding: 1rem;
+}
+
+form > label {
+  font-size: 1.8rem;
+  display: block;
+}
+
+form > input[type="text"],
+form > button {
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  display: block;
+  margin: 0.2rem 0;
+  padding: 0.6rem;
+  width: 100%;
+}
+
+iframe {
+  border: 0.1rem solid #c0c0c0;
+  box-sizing: border-box;
+  height: calc(100vh - 12.5rem);
+}
+
+.radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.radio-wave {
+  animation: radio-wave 3s linear infinite;
+  border: 0.3rem solid #c0c0c0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.radio-wave:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+.radio-wave:nth-child(3) {
+  animation-delay: -1s;
+}
+
+@keyframes radio-wave {
+  0% {
+    border-width: 0.3rem;
+    top: calc(100% - 6rem);
+    left: 50vw;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.05;
+  }
+
+  100% {
+    border-width: 0;
+    top: calc(100% - 6rem - 100vw);
+    left: -50vw;
+    width: 200vw;
+    height: 200vw;
+    opacity: 0;
+  }
+}
+
+.peers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 20rem);
+}
+
+.peer {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
+  color: #707070;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+}
+
+.peer:after {
+  content: attr(data-display-name);
+  position: absolute;
+  margin-top: 0.4rem;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+}
+
+.peer.owner {
+  position: absolute;
+  bottom: 3rem;
+  left: calc(50% - 3rem);
+}
+
+.peer > img {
+  width: 100%;
+}
